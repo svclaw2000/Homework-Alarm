@@ -7,3 +7,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Homework Alarm"
 include ':app'
+include ':domain'
