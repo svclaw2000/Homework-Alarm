@@ -1,7 +1,8 @@
-package com.khnsoft.homeworkalarm
+package com.khnsoft.presentation.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.khnsoft.presentation.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
