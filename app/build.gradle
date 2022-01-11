@@ -50,4 +50,5 @@ dependencies {
 
     implementation project(path: ':presentation')
     implementation project(path: ':domain')
+    implementation project(path: ':data')
 }

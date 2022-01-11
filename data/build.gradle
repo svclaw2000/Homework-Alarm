@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
     id 'kotlin'
+    id 'kotlin-kapt'
 }
 
 java {
@@ -8,6 +9,14 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
+kapt {
+    correctErrorTypes true
+}
+
 dependencies {
+
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
     implementation project(path: ':domain')
 }
