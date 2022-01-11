@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -31,6 +33,10 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes true
+}
+
 dependencies {
 
     implementation "androidx.core:core-ktx:$core_version"
@@ -38,6 +44,9 @@ dependencies {
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$ext_junit_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+
+    implementation "com.google.dagger:hilt-android:$dagger_version"
+    kapt "com.google.dagger:hilt-compiler:$dagger_version"
 
     implementation project(path: ':presentation')
 }
